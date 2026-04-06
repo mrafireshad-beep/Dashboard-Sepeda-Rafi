@@ -1,7 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib
 import seaborn as sns
 import streamlit as st
+import babel            
 from babel.numbers import format_currency
 
 # Menampilkan versi library di sidebar dashboard untuk pengecekan
@@ -9,6 +11,7 @@ st.sidebar.divider()
 st.sidebar.write("### 🛠️ Sistem Info (Requirements Check):")
 st.sidebar.write(f"**Streamlit:** {st.__version__}")
 st.sidebar.write(f"**Pandas:** {pd.__version__}")
+st.sidebar.write(f"**Numpy:** {pd.np.__version__ if hasattr(pd, 'np') else 'N/A'}") 
 st.sidebar.write(f"**Matplotlib:** {matplotlib.__version__}")
 st.sidebar.write(f"**Seaborn:** {sns.__version__}")
 st.sidebar.write(f"**Babel:** {babel.__version__}")
