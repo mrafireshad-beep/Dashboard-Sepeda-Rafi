@@ -12,7 +12,7 @@ sns.set(style='dark')
 @st.cache_data # Biar loading data lebih cepat saat ganti filter
 def load_data():
     # Sesuaikan path dengan lokasi di laptopmu
-    path = r"all_data_daily_processed.csv"
+    path = r"dashboard/all_data_daily_processed.csv"
     df = pd.read_csv(path)
     
     # Konversi tanggal
