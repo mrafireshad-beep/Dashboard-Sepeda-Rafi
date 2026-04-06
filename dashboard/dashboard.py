@@ -4,6 +4,16 @@ import seaborn as sns
 import streamlit as st
 from babel.numbers import format_currency
 
+# Menampilkan versi library di sidebar dashboard untuk pengecekan
+st.sidebar.divider()
+st.sidebar.write("### 🛠️ Sistem Info (Requirements Check):")
+st.sidebar.write(f"**Streamlit:** {st.__version__}")
+st.sidebar.write(f"**Pandas:** {pd.__version__}")
+st.sidebar.write(f"**Numpy:** {np.__version__}")
+st.sidebar.write(f"**Matplotlib:** {matplotlib.__version__}")
+st.sidebar.write(f"**Seaborn:** {sns.__version__}")
+st.sidebar.write(f"**Babel:** {babel.__version__}")
+
 # Konfigurasi Halaman Streamlit
 st.set_page_config(page_title="Bike Sharing Dashboard", layout="wide")
 sns.set(style='dark')
